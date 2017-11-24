@@ -3,7 +3,7 @@ include ('dbconn.php');
 $server = gethostname();
 list($first, $second, $third, $fourth, $fifth) =
     split("-", $server, 5);
-echo "<script>setTimeout(function(){window.location.href="http://chatapp.pressedontech.com"},6000);</script>";
+echo "<script>setTimeout(function(){window.location.href='http://chatapp.pressedontech.com'},6000);</script>";
 echo "Hello, world! I'm $fifth";
 
 $selectdb = mysql_select_db("will",$con);
