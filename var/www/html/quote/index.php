@@ -21,12 +21,6 @@ $myJSON = json_encode($myObj);
 
 header('Content-type: application/json');
 
-#$array1 = array('name' => 'game1',
-#               'publisher' => 'ubisoft',
-#               'screenshots' => $ss,
-#               'dates' => $dates,
-#               'added' => '2014/12/31');
-
 $array1 = array('name' => 'game1',
                 'words' => $myObj);
 
