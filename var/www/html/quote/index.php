@@ -16,12 +16,21 @@ $query = mysql_query("select words from quotes where id = $linenum");
 // Send the response
 
 $data = mysql_fetch_row($query);
+$myObj->quote = $data[0];
+$myJSON = json_encode($myObj);
+
 header('Content-type: application/json');
-echo json_encode( $data );
 
+#$array1 = array('name' => 'game1',
+#               'publisher' => 'ubisoft',
+#               'screenshots' => $ss,
+#               'dates' => $dates,
+#               'added' => '2014/12/31');
 
-// close the db connection
+$array1 = array('name' => 'game1',
+                'words' => $myObj);
+
+echo json_encode($array1);
 
 mysql_close($con);
 ?>
-
